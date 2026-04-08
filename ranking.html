@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Peckit — рейтинги и соревнования</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img src="assets/logo-brand-yellow.png" alt="Eco Peckit"></a>
+      
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О компании</a>
+        <a href="profile.html">Кабинет</a>
+        <a href="eco-coins.html">Eco-coins</a>
+        <a href="ranking.html">Рейтинг</a>
+        <a href="vacancies.html">Вакансии</a>
+      </nav>
+
+      <div class="nav-actions"><a class="btn btn-primary small" href="profile.html">Вернуться в кабинет</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section compact">
+      <div class="container">
+        <article class="panel content-card">
+          <span class="eyebrow">eco league</span>
+          <h1 style="font-size: clamp(40px, 5vw, 66px); line-height: .98; letter-spacing: -.05em; margin-bottom: 16px;">Соревнование районов и семей по объёму переработки</h1>
+          <p style="max-width: 840px;">Эта страница визуализирует механику соревнований: какой район сдал больше всего отходов и какое место семья занимает внутри своего района.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container leader-grid">
+        <article class="panel content-card">
+          <span class="eyebrow">районы</span>
+          <h3 style="font-size:30px; margin-bottom:8px;">Топ районов по переработке</h3>
+          <div class="leaderboard">
+            <div class="leader-row top"><div class="place crown">👑</div><div><strong>Чиланзар</strong><div class="muted">12 450 кг сдано</div></div><div class="fill-bar"><div style="width:100%"></div></div><strong>1 место</strong></div>
+            <div class="leader-row"><div class="place">2</div><div><strong>Юнусабад</strong><div class="muted">11 780 кг</div></div><div class="fill-bar"><div style="width:95%"></div></div><strong>2 место</strong></div>
+            <div class="leader-row"><div class="place">3</div><div><strong>Мирабад</strong><div class="muted">10 940 кг</div></div><div class="fill-bar"><div style="width:88%"></div></div><strong>3 место</strong></div>
+            <div class="leader-row"><div class="place">4</div><div><strong>Учтепа</strong><div class="muted">9 620 кг</div></div><div class="fill-bar"><div style="width:77%"></div></div><strong>4 место</strong></div>
+            <div class="leader-row"><div class="place">5</div><div><strong>Сергели</strong><div class="muted">8 980 кг</div></div><div class="fill-bar"><div style="width:72%"></div></div><strong>5 место</strong></div>
+          </div>
+        </article>
+        <article class="panel content-card">
+          <span class="eyebrow">семьи внутри района</span>
+          <h3 style="font-size:30px; margin-bottom:8px;">Топ семей Чиланзара</h3>
+          <div class="rank-list">
+            <div class="rank-row top"><div class="place crown">1</div><div><strong>Azamat Peckit</strong><div class="muted">1 360 кг переработки</div></div><strong>👑</strong><strong>+100</strong></div>
+            <div class="rank-row"><div class="place">2</div><div><strong>Eco Family 24</strong><div class="muted">1 290 кг</div></div><strong>—</strong><strong>0</strong></div>
+            <div class="rank-row"><div class="place">3</div><div><strong>Green House</strong><div class="muted">1 170 кг</div></div><strong>—</strong><strong>0</strong></div>
+            <div class="rank-row"><div class="place">4</div><div><strong>Smart Kids</strong><div class="muted">1 040 кг</div></div><strong>—</strong><strong>0</strong></div>
+            <div class="rank-row"><div class="place">5</div><div><strong>Future Sorters</strong><div class="muted">990 кг</div></div><strong>—</strong><strong>0</strong></div>
+          </div>
+          <div class="coin-bonus" style="margin-top:18px;"><strong>Механика награды</strong><p>Победителю района выдаётся корона в профиле и дополнительные 100 Eco-coins, которые начисляются при подтверждении сдачи через QR-код.</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

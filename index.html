@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Peckit — умная экосистема переработки</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img src="assets/logo-brand-yellow.png" alt="Eco Peckit"></a>
+      
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О компании</a>
+        <a href="profile.html">Кабинет</a>
+        <a href="eco-coins.html">Eco-coins</a>
+        <a href="ranking.html">Рейтинг</a>
+        <a href="vacancies.html">Вакансии</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary small" href="eco-coins.html">Магазин</a>
+        <a class="btn btn-primary small" href="profile.html">Личный кабинет</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">eco-peckit hackathon concept</span>
+          <h1>Умный вывоз отходов, eco-coins и экологичные продукты в одной системе</h1>
+          <p class="lead">Eco Peckit помогает семье заказать eco-контейнер, видеть заполненность баков, узнавать расписание ближайшего eco-car, получать баллы за переработку по QR-коду и обменивать их на экологичные товары, созданные из переработанных материалов.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="profile.html">Открыть кабинет</a>
+            <a class="btn btn-secondary" href="about.html">О нашей компании</a>
+            <a class="btn btn-ghost" href="vacancies.html">Вакансии</a>
+          </div>
+          <div class="hero-strip">
+            <div class="hero-chip"><strong>19:10</strong><span class="muted">следующий eco-car</span></div>
+            <div class="hero-chip"><strong>84%</strong><span class="muted">заполнен домашний бак</span></div>
+            <div class="hero-chip"><strong>4 860</strong><span class="muted">баланс Eco-coins</span></div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <article class="panel hero-card">
+            <div class="metric-line">
+              <div>
+                <span class="badge success">Smart bin online</span>
+                <h3 style="margin:14px 0 6px; font-size:34px;">Заполненность бака <span id="heroPercent">84%</span></h3>
+                <p class="muted">Когда бак переполняется, пользователю сразу показывается ближайшее окно вывоза и ETA машины.</p>
+              </div>
+              <button class="btn btn-secondary small" id="heroSimulate">Симулировать</button>
+            </div>
+            <div class="fill-bar"><div id="heroFill" style="width:84%"></div></div>
+            <div class="info-line"><span>Статус</span><strong id="heroStatus">Машина назначена</strong></div>
+            <div class="info-line"><span>Следующий eco-car</span><strong id="heroEta">Сегодня · 19:10</strong></div>
+            <div class="schedule-grid">
+              <div class="schedule-slot"><strong>18:40</strong><span>eco-car A12</span><span>2 места</span></div>
+              <div class="schedule-slot active"><strong>19:10</strong><span>ваш слот</span><span>ETA 18 мин</span></div>
+              <div class="schedule-slot"><strong>20:00</strong><span>резерв</span><span>4 места</span></div>
+            </div>
+          </article>
+          <article class="panel hero-card">
+            <div class="metric-line">
+              <div>
+                <span class="badge blue">district league</span>
+                <h3 style="margin:14px 0 6px; font-size:30px;">Чиланзар лидирует в городском эко-рейтинге</h3>
+              </div>
+              <span class="badge warning">👑 +100 Eco-coins</span>
+            </div>
+            <p>Районы соревнуются по объёму переработки. Победитель получает корону, а семья-лидер внутри района — дополнительные 100 Eco-coins.</p>
+            <div class="leaderboard" style="margin-top:18px;">
+              <div class="leader-row top"><div class="place crown">1</div><div><strong>Чиланзар</strong><div class="muted">12 450 кг на переработку</div></div><div class="fill-bar"><div style="width:100%"></div></div><strong>+100</strong></div>
+              <div class="leader-row"><div class="place">2</div><div><strong>Юнусабад</strong><div class="muted">11 780 кг</div></div><div class="fill-bar"><div style="width:91%"></div></div><strong>-</strong></div>
+              <div class="leader-row"><div class="place">3</div><div><strong>Мирабад</strong><div class="muted">10 940 кг</div></div><div class="fill-bar"><div style="width:84%"></div></div><strong>-</strong></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-title center">
+          <span class="eyebrow">ключевые модули</span>
+          <h2>Платформа соединяет умные контейнеры, вывоз, баллы, магазин, сообщество и модель роста B2C/B2B/B2G</h2>
+          <p>Это уже сайт-демо для хакатона: видно функционал, сценарии пользователя и продукты компании.</p>
+        </div>
+        <div class="card-grid-3">
+          <article class="panel feature-card"><div class="icon-box">🗓️</div><h3>Расписание eco-car</h3><p>Пользователь видит, когда приедет следующая машина, какие есть резервные окна и сколько осталось до вывоза.</p><ul class="feature-list"><li>ETA до дома</li><li>окна по времени</li><li>статус активной заявки</li></ul></article>
+          <article class="panel feature-card"><div class="icon-box">🗑️</div><h3>Заполненность баков</h3><p>Отдельная карточка с барами показывает, какие контейнеры почти заполнены и что нужно забрать первым.</p><ul class="feature-list"><li>пластик, бумага, стекло, органика</li><li>индикаторы переполнения</li><li>сигнал для вывоза</li></ul></article>
+          <article class="panel feature-card"><div class="icon-box">📊</div><h3>Статистика</h3><p>Семья видит свою динамику переработки, частоту вывозов, точность сортировки и место в районе.</p><ul class="feature-list"><li>графики за неделю</li><li>активность семьи</li><li>позиция в рейтинге</li></ul></article>
+          <article class="panel feature-card"><div class="icon-box">📱</div><h3>QR-сканирование</h3><p>После сдачи отходов пользователь подтверждает переработку QR-кодом и получает Eco-coins.</p><ul class="feature-list"><li>подтверждение сдачи</li><li>моментальное начисление</li><li>история транзакций</li></ul></article>
+          <article class="panel feature-card"><div class="icon-box">🛍️</div><h3>Эко-магазин</h3><p>Eco-coins можно обменять на экологичные товары, созданные из переработанных и безопасных материалов.</p><ul class="feature-list"><li>товары из переработки</li><li>разлагаемые материалы</li><li>оплата Eco-coins</li></ul></article>
+          <article class="panel feature-card"><div class="icon-box">🤝</div><h3>Сообщество</h3><p>Платформа объединяет волонтёров, клубы, субботние мероприятия и партнёров проекта.</p><ul class="feature-list"><li>волонтёрские наборы</li><li>клубы и события</li><li>партнёрский блок</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="ecosystem-model">
+      <div class="container">
+        <div class="section-title center">
+          <span class="eyebrow">b2c · b2b · b2g</span>
+          <h2>Eco Peckit можно масштабировать сразу в трёх направлениях</h2>
+          <p>Идея становится сильнее для хакатона, потому что это не просто один сервис, а экосистема с тремя понятными каналами роста: для семей, бизнеса и города.</p>
+        </div>
+        <div class="segment-grid">
+          <article class="panel segment-card">
+            <span class="segment-tag">B2C</span>
+            <h3>Для семей и жителей</h3>
+            <p>Пользователь заказывает домашний eco-контейнер, видит заполненность баков, получает расписание ближайшего eco-car и сканирует QR-код после сдачи отходов.</p>
+            <ul class="feature-list">
+              <li>личный кабинет с барами заполненности</li>
+              <li>Eco-coins за сортировку и сдачу</li>
+              <li>обмен баллов на товары и авто-сортировщик</li>
+            </ul>
+            <div class="segment-metric"><strong>основная ценность</strong><span>удобно, выгодно и понятно для семьи</span></div>
+          </article>
+          <article class="panel segment-card">
+            <span class="segment-tag blue">B2B</span>
+            <h3>Для школ, офисов, ЖК и бизнеса</h3>
+            <p>Компании и организации могут устанавливать smart-контейнеры на своей территории, видеть аналитику по отходам и использовать Eco Peckit как CSR и ESG-инструмент.</p>
+            <ul class="feature-list">
+              <li>контейнеры и авто-сортировщики для объекта</li>
+              <li>общий кабинет для менеджера или администрации</li>
+              <li>отчёты по сбору и переработке для партнёров</li>
+            </ul>
+            <div class="segment-metric"><strong>основная ценность</strong><span>репутация, ESG-отчётность и удобный сбор отходов</span></div>
+          </article>
+          <article class="panel segment-card">
+            <span class="segment-tag gold">B2G</span>
+            <h3>Для районов и городских программ</h3>
+            <p>Городу платформа даёт карту заполненности, рейтинг районов, статистику переработки и механизм вовлечения жителей через соревнования, бонусы и волонтёрские программы.</p>
+            <ul class="feature-list">
+              <li>рейтинг районов и семей внутри района</li>
+              <li>городская аналитика по переработке</li>
+              <li>субботники, клубы и партнёрство с заводами</li>
+            </ul>
+            <div class="segment-metric"><strong>основная ценность</strong><span>чистый город, прозрачные данные и вовлечение сообщества</span></div>
+          </article>
+        </div>
+        <article class="panel market-map">
+          <div>
+            <span class="eyebrow">один продукт · три рынка</span>
+            <h3>Логика роста проекта</h3>
+            <p class="muted">Сначала пилот запускается как B2C-сервис в одном районе, затем подключаются школы, офисы и ЖК как B2B, а после этого проект масштабируется на уровень района и города как B2G-решение.</p>
+          </div>
+          <div class="market-flow">
+            <div class="flow-pill">1. B2C пилот</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-pill">2. B2B объекты</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-pill">3. B2G масштабирование</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="about-preview">
+      <div class="container about-columns">
+        <article class="panel content-card">
+          <span class="eyebrow">о нашей компании</span>
+          <h2 style="font-size: clamp(36px, 4vw, 54px); line-height:1.04; letter-spacing:-0.05em; margin:0 0 12px;">Мы сотрудничаем с заводами переработки и металлургии, чтобы сохранять природу в чистоте</h2>
+          <p>Eco Peckit предлагает удобную экосистему: заказать наши eco-контейнеры, отслеживать их заполненность и регулярно забирать их, как только они заполнятся. За то, что пользователь остаётся с нами, он получает eco-coins, которые потом можно обменять на продукты из магазина.</p>
+          <p>Все товары в магазине экологически безопасны, разлагаются или созданы из переработанных материалов. Среди ключевых продуктов — <strong>авто-сортировщик мусора</strong> и наши <strong>глубокие контейнеры</strong>, которые устанавливаются так, чтобы от них не исходил неприятный запах.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="about.html">Открыть полный раздел</a><a class="btn btn-secondary" href="vacancies.html">Смотреть вакансии</a></div>
+        </article>
+        <article class="panel content-card">
+          <span class="eyebrow">продукты</span>
+          <div class="product-card-visual">
+            <span class="badge warning store-badge">магазин Eco-coins</span>
+            <div class="sorter-machine"></div>
+            <div class="deep-bin"></div>
+          </div>
+          <div class="info-grid" style="margin-top:18px;">
+            <div class="stat-pill"><strong>Auto Sorter</strong><div class="muted">умная сортировка дома</div></div>
+            <div class="stat-pill"><strong>Deep Container</strong><div class="muted">без запаха и переполнения</div></div>
+            <div class="stat-pill"><strong>Recycled Store</strong><div class="muted">товары из вторсырья</div></div>
+            <div class="stat-pill"><strong>Factory Partners</strong><div class="muted">заводы переработки и металлургии</div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="actions">
+      <div class="container">
+        <div class="section-title center">
+          <span class="eyebrow">действия пользователя</span>
+          <h2>Новые функции, которые ты попросил добавить в проект</h2>
+        </div>
+        <div class="action-grid">
+          <article class="panel action-card"><div class="icon-box">🧩</div><h3>Установить eco-контейнер</h3><p>Пользователь может оставить заявку на установку собственного контейнера для дома, двора или школы.</p><div class="hero-actions"><button class="btn btn-primary" data-demo-action="Заявка на установку eco-контейнера отправлена.">Оставить заявку</button></div></article>
+          <article class="panel action-card"><div class="icon-box">⚙️</div><h3>Купить авто-сортировщик</h3><p>Умный авто-сортировщик можно купить за деньги или обменять на накопленные Eco-coins в магазине.</p><div class="hero-actions"><a class="btn btn-primary" href="eco-coins.html">Перейти в магазин</a></div></article>
+          <article class="panel action-card"><div class="icon-box">🌱</div><h3>Вступить в ряды волонтёров</h3><p>Участник может стать частью волонтёрского движения, помогать на точках сбора и вести экопросвещение.</p><div class="hero-actions"><button class="btn btn-primary" data-demo-action="Заявка волонтёра принята. Мы свяжемся с вами по email.">Стать волонтёром</button></div></article>
+          <article class="panel action-card"><div class="icon-box">🏘️</div><h3>Организовывать клубы и мероприятия</h3><p>Пользователь может запускать районные эко-клубы и записываться на субботние мероприятия по уборке и сортировке.</p><div class="hero-actions"><button class="btn btn-primary" data-demo-action="Вы записаны на ближайшее субботнее мероприятие района.">Записаться</button></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="partners">
+      <div class="container">
+        <div class="section-title center">
+          <span class="eyebrow">место под партнёров</span>
+          <h2>Здесь можно показать компании, школы, университеты и заводы-партнёры</h2>
+          <p>Пока блок оставлен как аккуратная заглушка, которую можно заменить на реальные логотипы.</p>
+        </div>
+        <div class="partner-grid">
+          <article class="panel partner-card">Partner 01<span>завод переработки</span></article>
+          <article class="panel partner-card">Partner 02<span>металлургия</span></article>
+          <article class="panel partner-card">Partner 03<span>образовательный грант</span></article>
+          <article class="panel partner-card">Partner 04<span>eco-магазин</span></article>
+          <article class="panel partner-card">Partner 05<span>детский контент</span></article>
+          <article class="panel partner-card">Partner 06<span>университет / школа</span></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container panel footer-box">
+      <a class="brand" href="index.html"><img src="assets/logo-brand-yellow.png" alt="Eco Peckit"></a>
+      <div>Демо-сайт для хакатона: умные контейнеры, расписание eco-car, QR-начисления, магазин, волонтёры, клубы и вакансии.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

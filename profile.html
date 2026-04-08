@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Peckit — личный кабинет</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img src="assets/logo-brand-yellow.png" alt="Eco Peckit"></a>
+      
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О компании</a>
+        <a href="profile.html">Кабинет</a>
+        <a href="eco-coins.html">Eco-coins</a>
+        <a href="ranking.html">Рейтинг</a>
+        <a href="vacancies.html">Вакансии</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary small" href="about.html">О компании</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container app-layout">
+    <aside class="panel sidebar">
+      <div class="profile-head">
+        <div class="avatar">AP</div>
+        <div><strong>Azamat Peckit</strong><div class="muted">Семейный профиль · район Чиланзар</div></div>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="active" href="#">Дашборд</a>
+        <a href="#schedule">Расписание eco-car</a>
+        <a href="#bins">Карточка баков</a>
+        <a href="#stats">Статистика</a>
+        <a href="#actions">Быстрые действия</a>
+        <a href="#ranking">Место в районе</a>
+      </nav>
+      <div class="panel side-card">
+        <div class="badge warning">👑 лидер района</div>
+        <p style="margin:12px 0 8px;">Ваша семья занимает 1 место в Чиланзаре и уже получила бонус за лидерство.</p>
+        <strong>+100 бонус за лидерство уже выдан</strong>
+      </div>
+    </aside>
+
+    <section class="dashboard-main">
+      <article class="panel dashboard-hero">
+        <div>
+          <span class="eyebrow">личный кабинет eco-peckit</span>
+          <h1 style="font-size: clamp(36px, 5vw, 60px); line-height:.98; letter-spacing:-.05em; margin:0 0 12px;">Здесь видно расписание машины, баки, статистику и быстрые действия семьи</h1>
+          <p>Кабинет можно показать как главное MVP-ядро: вывоз, QR, магазин, волонтёрство, установка контейнеров и участие в клубах — в одном месте.</p>
+          <div class="hero-actions" style="margin-bottom:0;">
+            <button class="btn btn-primary" id="scanQrBtn">Сканировать QR-код</button>
+            <a class="btn btn-secondary" href="ranking.html">Открыть рейтинг</a>
+            <a class="btn btn-secondary" href="eco-coins.html">Открыть магазин</a>
+          </div>
+          <div id="scanResult" class="scan-result">Готово к сканированию. После подтверждения баллы начислятся автоматически.</div>
+        </div>
+        <div class="panel" style="padding:22px; background: rgba(255,255,255,.03);">
+          <div class="qr-box" style="background:transparent; border:none; padding:0;">
+            <div class="qr-code"></div>
+            <div>
+              <div class="badge blue">точка приёма №014</div>
+              <h3 style="font-size:28px; margin:14px 0 8px;">QR-подтверждение сдачи</h3>
+              <p>Сканирование даёт базовые баллы за сдачу. Если семья лидер внутри района — система автоматически добавляет ещё +100 Eco-coins.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="dashboard-stats">
+        <article class="panel metric-card"><span class="muted">Баланс</span><strong id="balanceValue" data-value="4860">4 860</strong><span>Eco-coins</span></article>
+        <article class="panel metric-card"><span class="muted">Следующий eco-car</span><strong>19:10</strong><span>ETA 18 минут</span></article>
+        <article class="panel metric-card"><span class="muted">Заполненность дома</span><strong>84%</strong><span>органика критична</span></article>
+        <article class="panel metric-card"><span class="muted">Место в районе</span><strong>#1 👑</strong><span>Чиланзар</span></article>
+      </div>
+
+      <div class="dashboard-grid" id="schedule">
+        <article class="panel content-card">
+          <span class="eyebrow">расписание eco-car</span>
+          <h3 style="font-size:30px; margin-bottom:8px;">Когда приедет следующая машина</h3>
+          <p>Пользователь видит точный слот, маршрут и запасные окна, чтобы не пропустить вывоз.</p>
+          <div class="schedule-timeline" style="display:grid; grid-template-columns: repeat(4,1fr); gap:12px;">
+            <div class="time-card"><strong>17:40</strong><div class="muted">машина выехала с базы</div></div>
+            <div class="time-card"><strong>18:15</strong><div class="muted">2 дома до вас</div></div>
+            <div class="time-card active"><strong>19:10</strong><div class="muted">ваш eco-car</div></div>
+            <div class="time-card"><strong>20:00</strong><div class="muted">резервное окно</div></div>
+          </div>
+          <div class="hr"></div>
+          <div class="info-line"><span>Водитель</span><strong>Murad S.</strong></div>
+          <div class="info-line"><span>Машина</span><strong>Eco-car A12</strong></div>
+          <div class="info-line"><span>Категории</span><strong>Пластик · Бумага · Стекло · Органика</strong></div>
+          <div class="info-line"><span>Статус</span><strong>в пути</strong></div>
+        </article>
+
+        <article class="panel content-card" id="bins">
+          <span class="eyebrow">карточка баков</span>
+          <h3 style="font-size:30px; margin-bottom:8px;">Уровень заполненности баков в виде баров</h3>
+          <p>Отдельная карточка показывает, какой бак близок к переполнению и что стоит вывезти первым.</p>
+          <div class="bin-bar-list">
+            <div class="bin-row"><span>Пластик</span><div class="track"><div class="bar-blue" style="width:86%"></div></div><strong>86%</strong></div>
+            <div class="bin-row"><span>Бумага</span><div class="track"><div class="bar-gold" style="width:64%"></div></div><strong>64%</strong></div>
+            <div class="bin-row"><span>Стекло</span><div class="track"><div class="bar-green" style="width:48%"></div></div><strong>48%</strong></div>
+            <div class="bin-row"><span>Органика</span><div class="track"><div class="bar-red" style="width:92%"></div></div><strong>92%</strong></div>
+          </div>
+          <div class="banner-note" style="margin-top:18px;"><strong>Рекомендация:</strong> органика и пластик почти заполнены — лучше сохранить слот на сегодня 19:10.</div>
+        </article>
+      </div>
+
+      <div class="dashboard-grid" id="stats">
+        <article class="panel content-card">
+          <span class="eyebrow">статистика</span>
+          <h3 style="font-size:30px; margin-bottom:8px;">Личная статистика семьи</h3>
+          <p>Страница показывает не только баллы, но и полезную аналитику: сколько сдано, как часто вызывается машина и насколько качественно отсортированы отходы.</p>
+          <div class="chart-bars">
+            <div class="chart-row"><span>Сдано за неделю</span><div class="track"><div style="width:82%"></div></div><strong>62 кг</strong></div>
+            <div class="chart-row"><span>Чистая сортировка</span><div class="track"><div style="width:78%"></div></div><strong>78%</strong></div>
+            <div class="chart-row"><span>Вывозы за месяц</span><div class="track"><div style="width:69%"></div></div><strong>11</strong></div>
+            <div class="chart-row"><span>Eco-coins за месяц</span><div class="track"><div style="width:91%"></div></div><strong>+1 140</strong></div>
+          </div>
+        </article>
+        <div class="stack">
+          <article class="panel content-card" id="ranking">
+            <span class="eyebrow">соревнования</span>
+            <h3 style="font-size:28px; margin-bottom:8px;">Ваше место внутри района</h3>
+            <div class="rank-list">
+              <div class="rank-row top"><div class="place crown">1</div><div><strong>Azamat Peckit</strong><div class="muted">1 360 кг на переработку</div></div><strong>👑</strong><strong>+100</strong></div>
+              <div class="rank-row"><div class="place">2</div><div><strong>Eco Family 24</strong><div class="muted">1 290 кг</div></div><strong>—</strong><strong>0</strong></div>
+              <div class="rank-row"><div class="place">3</div><div><strong>Green House</strong><div class="muted">1 170 кг</div></div><strong>—</strong><strong>0</strong></div>
+            </div>
+          </article>
+          <article class="panel content-card">
+            <span class="eyebrow">начисления</span>
+            <h3 style="font-size:28px; margin-bottom:8px;">История последних начислений</h3>
+            <div class="tx-list">
+              <div class="tx-row"><span>Пластик · чистая сортировка</span><strong>+150</strong></div>
+              <div class="tx-row"><span>Бумага · семейный бонус</span><strong>+80</strong></div>
+              <div class="tx-row"><span>Обучающий мини-мультфильм</span><strong>+35</strong></div>
+              <div class="tx-row"><span>1 место в Чиланзаре</span><strong>+100</strong></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <article class="panel content-card" id="actions">
+        <span class="eyebrow">быстрые действия</span>
+        <h3 style="font-size:30px; margin-top:0;">Установка контейнера, покупка сортировщика, волонтёрство и клубы</h3>
+        <div class="action-grid">
+          <article class="panel action-card"><div class="icon-box">🧩</div><h3>Установить eco-контейнер</h3><p>Запрос на установку собственного контейнера для дома, школы или двора.</p><button class="btn btn-primary" data-demo-action="Заявка на установку eco-контейнера отправлена.">Установить</button></article>
+          <article class="panel action-card"><div class="icon-box">⚙️</div><h3>Купить авто-сортировщик</h3><p>Оплата деньгами или обмен на накопленные Eco-coins в магазине.</p><a class="btn btn-primary" href="eco-coins.html">Купить</a></article>
+          <article class="panel action-card"><div class="icon-box">🌱</div><h3>Вступить в ряды волонтёров</h3><p>Участие в кампаниях, сборе и эко-образовании района.</p><button class="btn btn-primary" data-demo-action="Вы добавлены в список волонтёров района.">Вступить</button></article>
+          <article class="panel action-card"><div class="icon-box">🏘️</div><h3>Клубы и субботние мероприятия</h3><p>Организация эко-клубов и запись на субботние мероприятия.</p><button class="btn btn-primary" data-demo-action="Вы записаны на ближайшее субботнее мероприятие.">Записаться</button></article>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
